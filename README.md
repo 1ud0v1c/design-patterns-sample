@@ -28,3 +28,5 @@ These 23 GoF patterns are generally considered the foundation for all other patt
 
 ## Behavioral Patterns
 
+- [Iterator pattern](iterator/README.md)
+
