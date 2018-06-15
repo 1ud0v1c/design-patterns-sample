@@ -13,9 +13,9 @@ In software engineering, a software design pattern is a general reusable solutio
 
 These 23 GoF patterns are generally considered the foundation for all other patterns. They are categorized in three groups: 
 
-- Creational: creational patterns are ones that create objects for you, rather than having you instantiate objects directly, this gives your program more flexibility in deciding which objects need to be created for a given case.
-- Structural: these concern class and object composition
-- Behavioral: these design patterns are specifically concerned with communication between objects.
+- **Creational**: creational patterns are ones that create objects for you, rather than having you instantiate objects directly, this gives your program more flexibility in deciding which objects need to be created for a given case.
+- **Structural**: these concern class and object composition
+- **Behavioral**: these design patterns are specifically concerned with communication between objects.
 
 ## Creational Patterns
 

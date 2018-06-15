@@ -1,30 +1,31 @@
 /**
- * In Kotlin, the singleton pattern is used as a replacement for static members and fields that don’t exist in that programming language. A singleton is created by 
- * simply declaring an object. As follow:
+ * In Kotlin, the singleton pattern is used as a replacement for static members and fields that don’t exist 
+ * in that programming language. A singleton is created by simply declaring an object. As follow:
  *
- * object CacheManager {
+ * object Cache {
  *     init {
  *         println("init complete")
  *     }
  * }
  *
- * The object will be instantiated and its init blocks will be executed lazily upon first access, in a thread-safe way. To achieve this, a Kotlin object actually relies on a Java static initialization 
- * block. The above Kotlin object will be compiled to the following equivalent Java code:
+ * The object will be instantiated and its init blocks will be executed lazily upon first access, in a thread-safe 
+ * way. To achieve this, a Kotlin object actually relies on a Java static initialization block. The above Kotlin 
+ * object will be compiled to the following equivalent Java code:
  * 
- * public final class CacheManager {
- *     public static final CacheManager INSTANCE;
+ * public final class Cache {
+ *     public static final Cache INSTANCE;
  *
- *     private CacheManager() {
- *         INSTANCE = (CacheManager) this;
- *		   System.out.println("init complete");
+ *     private Cache() {
+ *         INSTANCE = (Cache) this;
+ *         System.out.println("init complete");
  *	   }
  *	   
  *	   static {
- *	       new CacheManager();
+ *	       new Cache();
  * 	   }
  * }
  */
-object CacheManager {
+object Cache {
     private val cache: MutableMap<String, String> = mutableMapOf()
 
     fun put(key: String, value: String) {
