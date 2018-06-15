@@ -3,16 +3,15 @@
  * you must create builders only if it's really necessary, as you can see, ading a builder class means you now have to remember to update two places when adding a field. It should only be added if you 
  * have to use Kotlin from the Java side, for example. 
  */
-data class Book private constructor (var isbn: String,
-									 var title: String,
-									 var author: String,
-									 var description: String,
-									 var image: String?,
-									 var pages: Int,
-									 var category: String,
-									 var publisher: String,
-									 var publisherDate: String) {
-
+data class Book private constructor (var isbn: String, 
+				     var title: String,
+				     var author: String,
+				     var description: String,
+				     var image: String?,
+				     var pages: Int,
+				     var category: String,
+				     var publisher: String,
+				     var publisherDate: String) {
     class Builder {
         private lateinit var isbn: String
         private var title: String = ""
@@ -25,50 +24,46 @@ data class Book private constructor (var isbn: String,
         private var publisherDate: String = ""
 
         fun isbn(isbn: String) = apply { 
-			this.isbn = isbn 
-		}
+		this.isbn = isbn 
+	}
 
         fun title(title: String) = apply { 
-			this.title = title 
-		}
+		this.title = title 
+	}
 
         fun author(author: String) = apply { 
-			this.author = author 
-		}
+		this.author = author 
+	}
 
         fun description(description: String) = apply { 
-			this.description = description
-		}
+		this.description = description
+	}
 
         fun image(image: String) = apply { 
-			this.image = image 
-		}
+		this.image = image 
+	}
 
         fun pages(pages: Int) = apply { 
-			this.pages = pages 
-		}
+		this.pages = pages 
+	}
 
         fun category(category: String) = apply { 
-			this.category = category 
-		}
+		this.category = category 
+	}
 
         fun publisher(publisher: String) = apply { 
-			this.publisher = publisher 
-		}
+		this.publisher = publisher 
+	}
 
         fun publisherDate(publisherDate: String) = apply { 
-			this.publisherDate = publisherDate 
-		}
+		this.publisherDate = publisherDate 
+	}
 
-        fun build() = Book(isbn,
-						   title,
-						   author,
-						   description,
-						   image,
-						   pages,
-						   category,
-						   publisher,
-						   publisherDate
+        fun build() = Book(isbn, title,
+			   author, description,
+			   image, pages,
+			   category, publisher,
+			   publisherDate
         )
     }
 }
