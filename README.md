@@ -11,3 +11,4 @@ In software engineering, a software design pattern is a general reusable solutio
 ## The 23 design patterns
 
 - [Adapter pattern](adapter/README.md)
+- [Builder pattern](builder/README.md)
