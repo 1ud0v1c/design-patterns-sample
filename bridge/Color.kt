@@ -1,0 +1,3 @@
+interface Color {
+	fun applyColor()
+}
