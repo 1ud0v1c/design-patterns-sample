@@ -18,19 +18,23 @@ The Bridge pattern is an application of the old advice, "prefer composition over
 
 When, you have a structure like this:
 
+```
                    ----Shape---
                   /            \
          Rectangle              Circle
         /         \            /      \
 BlueRectangle  RedRectangle BlueCircle RedCircle
 
+```
 
 With the bridge pattern after some refactoring, you will have a structure like this:
 
+```
           ----Shape---                        Color
          /            \                       /   \
 Rectangle(Color)   Circle(Color)           Blue   Red
 
+```
 
 ### Sources 
 
